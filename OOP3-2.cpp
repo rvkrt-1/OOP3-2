@@ -126,6 +126,22 @@ public:
 
 };
 
+class Triangle {
+protected:
+	Point p1;
+	Point p2;
+	Point p3;
+public:
+	Triangle() { printf("Triangle()\n"); }
+	Triangle(int x1, int y1, int x2, int y2, int x3, int y3) : p1(x1, y1), p2(x2, y2), p3(x3, y3) {
+		printf("Triangle(int x1, int y1, int x2, int y2, int x3, int y3 )\n");
+	}
+	~Triangle() { printf("~Triangle\n"); }
+	void reset();
+};
+
+
+
 int main() {
 	//экспереминтируйте и создавайте обьекты
 	return 0;
