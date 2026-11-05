@@ -77,6 +77,46 @@ public:
 
 };
 
+class Line {
+protected:
+	Point* p1;
+	Point* p2;
+public:
+	Line() {
+		printf("Line()\n");
+		p1 = new Point();
+		p2 = new Point();
+	}
+	Line(Point* p1, Point* p2) {
+		printf("Line(Point* p1, Point* p2)\n");
+		this->p1 = p1;
+		this->p2 = p2;
+	}
+
+	Line(int x1, int y1, int x2, int y2) {
+		printf("Line(int x1, int y1, int x2, int y2)\n");
+		p1 = new Point(x1, y1);
+		p2 = new Point(x2, y2);
+	}
+
+	Line(Point& p1, Point& p2) {
+		printf("Line(Point& p1, Point& p2)\n");
+		this->p1 = new Point(p1);
+		this->p2 = new Point(p2);
+	}
+
+	Line(const Line& line) {
+		printf("Line(const Line& line)\n");
+		p1 = new Point(*(line.p1));
+		p2 = new Point(*(line.p2));
+	}
+	virtual ~Line() {
+		delete p1;
+		delete p2;
+		printf("~Line\n");
+	}
+};
+
 int main() {
 	//экспереминтируйте и создавайте обьекты
 	return 0;
