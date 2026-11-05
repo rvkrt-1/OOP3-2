@@ -117,6 +117,15 @@ public:
 	}
 };
 
+class ColorLine : public Line {
+protected:
+	string color;
+public:
+	ColorLine() {}
+	~ColorLine() { printf("~ColorLine\n"); }
+
+};
+
 int main() {
 	//экспереминтируйте и создавайте обьекты
 	return 0;
