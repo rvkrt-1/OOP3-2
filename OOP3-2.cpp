@@ -140,7 +140,12 @@ public:
 	void reset();
 };
 
-
+void Triangle::reset() {
+	printf("Triangle::reset()\n");
+	p1.reset();
+	p2.reset();
+	p3.reset();
+}
 
 int main() {
 	//экспереминтируйте и создавайте обьекты
